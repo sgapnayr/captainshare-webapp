@@ -193,7 +193,7 @@ const Header = ({ layoutType }: HeaderPropsType) => {
               <Messages />
 
               {/* Profile Dropdown */}
-              <Profile />
+              {/* <Profile /> */}
             </div>
           </Navbar.Collapse>
           {/* Mobile Toggle Icon */}

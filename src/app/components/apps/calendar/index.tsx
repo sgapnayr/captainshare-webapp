@@ -1,19 +1,13 @@
 "use client";
 import React from "react";
-import { Calendar, momentLocalizer } from 'react-big-calendar';
+import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import Events from "./EventData";
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import { TbCheck }  from "react-icons/tb";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import { TbCheck } from "react-icons/tb";
 
 import CardBox from "@/app/components/shared/CardBox";
-import {
-  Button,
-  Datepicker,
-  Label,
-  Modal,
-  TextInput,
-} from "flowbite-react";
+import { Button, Datepicker, Label, Modal, TextInput } from "flowbite-react";
 
 moment.locale("en-GB");
 const localizer = momentLocalizer(moment);
@@ -25,8 +19,6 @@ type EvType = {
   end?: Date;
   color?: string;
 };
-
-
 
 const CalendarApp = () => {
   const [calevents, setCalEvents] = React.useState<any>(Events);
@@ -103,7 +95,8 @@ const CalendarApp = () => {
     setEnd("");
     setUpdate(null);
   };
-  const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value);
+  const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setTitle(e.target.value);
   const selectinputChangeHandler = (id: string) => setColor(id);
 
   const submitHandler = (e: React.ChangeEvent<any>) => {
@@ -152,15 +145,14 @@ const CalendarApp = () => {
   const handleEndChange = (newValue: any) => {
     setEnd(newValue);
   };
-  1
+  1;
 
-const handleDateChange = (date:any) => {
+  const handleDateChange = (date: any) => {
     console.log(date);
   };
 
   return (
     <>
-
       <CardBox>
         <Calendar
           selectable
@@ -178,7 +170,7 @@ const handleDateChange = (date:any) => {
       {/* Dialog/Modal */}
       <Modal dismissible show={open} size="lg" onClose={handleClose}>
         <form onSubmit={update ? updateEvent : submitHandler}>
-          <Modal.Header className="items-start" >
+          <Modal.Header className="items-start">
             {update ? "Update Event" : "Add Event"}
 
             <p className="text-darklink font-normal mt-3 text-sm">
@@ -245,7 +237,6 @@ const handleDateChange = (date:any) => {
             </div>
           </Modal.Body>
           <Modal.Footer>
-           
             {update ? (
               <Button
                 type="submit"

@@ -33,12 +33,12 @@ const SidebarContent: MenuItem[] = [
   {
     heading: "Home",
     children: [
-      // {
-      //   name: "Modern",
-      //   icon: "tabler:aperture",
-      //   id: uniqueId(),
-      //   url: "/",
-      // },
+      {
+        name: "Modern",
+        icon: "tabler:aperture",
+        id: uniqueId(),
+        url: "/",
+      },
       // {
       //   name: "eCommerce",
       //   icon: "tabler:shopping-cart",
