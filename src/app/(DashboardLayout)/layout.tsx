@@ -26,10 +26,11 @@ export default function Layout({
 
           {/* Body Content  */}
           <div
-            className={` ${isLayout == "full"
-              ? "w-full p-6 md:px-6 "
-              : "container mx-auto  p-6"
-              } ${activeLayout == "horizontal" ? 'xl:mt-3' : ''}
+            className={` ${
+              isLayout == "full"
+                ? "w-full p-6 md:px-6 "
+                : "container mx-auto  p-6"
+            } ${activeLayout == "horizontal" ? "xl:mt-3" : ""}
             `}
           >
             {children}

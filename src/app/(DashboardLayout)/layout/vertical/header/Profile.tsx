@@ -5,7 +5,7 @@ import * as profileData from "./Data";
 import Link from "next/link";
 import Image from "next/image";
 import SimpleBar from "simplebar-react";
-import unlimitedbg from "/public/images/backgrounds/unlimited-bg.png"
+import unlimitedbg from "/public/images/backgrounds/unlimited-bg.png";
 
 const Profile = () => {
   return (
@@ -37,8 +37,12 @@ const Profile = () => {
               className="rounded-full"
             />
             <div>
-              <h5 className="card-title text-sm  mb-0.5 font-medium">Mathew Anderson</h5>
-              <span className="card-subtitle text-muted font-normal">Designer</span>
+              <h5 className="card-title text-sm  mb-0.5 font-medium">
+                Mathew Anderson
+              </h5>
+              <span className="card-subtitle text-muted font-normal">
+                Designer
+              </span>
               <p className="card-subtitle font-normal text-muted mb-0 mt-1 flex items-center">
                 <Icon
                   icon="tabler:mail"
@@ -50,47 +54,55 @@ const Profile = () => {
           </div>
         </div>
         <SimpleBar>
-        {profileData.profileDD.map((items, index) => (
-          <Dropdown.Item
-            as={Link}
-            href={items.url}
-            className="px-6 py-3 flex justify-between items-center bg-hover group/link w-full"
-            key={index}
-          >
-            <div className="flex items-center w-full">
-              <div
-                className={`h-11 w-11 flex-shrink-0 rounded-md flex justify-center items-center bg-lightprimary`}
-              >
-                <Image src={items.img} alt="icon" />
-              </div>
-              <div className="ps-4 flex justify-between w-full">
-                <div className="w-3/4 ">
-                  <h5 className="mb-1 text-sm  group-hover/link:text-primary">
-                    {items.title}
-                  </h5>
-                  <div className="text-xs  text-darklink">{items.subtitle}</div>
+          {profileData.profileDD.map((items, index) => (
+            <Dropdown.Item
+              as={Link}
+              href={items.url}
+              className="px-6 py-3 flex justify-between items-center bg-hover group/link w-full"
+              key={index}
+            >
+              <div className="flex items-center w-full">
+                <div
+                  className={`h-11 w-11 flex-shrink-0 rounded-md flex justify-center items-center bg-lightprimary`}
+                >
+                  <Image src={items.img} alt="icon" />
+                </div>
+                <div className="ps-4 flex justify-between w-full">
+                  <div className="w-3/4 ">
+                    <h5 className="mb-1 text-sm  group-hover/link:text-primary">
+                      {items.title}
+                    </h5>
+                    <div className="text-xs  text-darklink">
+                      {items.subtitle}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Dropdown.Item>
-        ))}
+            </Dropdown.Item>
+          ))}
         </SimpleBar>
 
         <div className="upgrade-plan bg-primary-subtle position-relative overflow-hidden rounded-4 m-30 my-4 rounded-md  bg-lightprimary">
-                            <div className="grid grid-cols-12 p-6 gap-6">
-                              <div className="col-span-6">
-                                <h5 className="text-base mb-3.5 font-semibold leading-5">Unlimited Access</h5>
-                                <Button color={"primary"} className=" rounded-md" >
-                                  <span className="leading-4" >Upgrade</span>
-                                </Button>
-                              </div>
-                              <div className="col-span-6">
-                                <div className="-m-6 unlimited-img">
-                                  <Image src={unlimitedbg} alt="modernize-img" className="w-100 scale-[1.17] rtl:-scale-[1.17]"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+          <div className="grid grid-cols-12 p-6 gap-6">
+            <div className="col-span-6">
+              <h5 className="text-base mb-3.5 font-semibold leading-5">
+                Unlimited Access
+              </h5>
+              <Button color={"primary"} className=" rounded-md">
+                <span className="leading-4">Upgrade</span>
+              </Button>
+            </div>
+            <div className="col-span-6">
+              <div className="-m-6 unlimited-img">
+                <Image
+                  src={unlimitedbg}
+                  alt="modernize-img"
+                  className="w-100 scale-[1.17] rtl:-scale-[1.17]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="pt-2 px-30">
           <Button

@@ -41,7 +41,15 @@ const Header = ({ layoutType }: HeaderPropsType) => {
     };
   }, []);
 
-  const { setIsCollapse, isCollapse, isLayout, setActiveMode, activeMode,isMobileSidebar,setIsMobileSidebar } = useContext(CustomizerContext);
+  const {
+    setIsCollapse,
+    isCollapse,
+    isLayout,
+    setActiveMode,
+    activeMode,
+    isMobileSidebar,
+    setIsMobileSidebar,
+  } = useContext(CustomizerContext);
 
   const [mobileMenu, setMobileMenu] = useState("");
 
@@ -54,24 +62,28 @@ const Header = ({ layoutType }: HeaderPropsType) => {
   };
 
   const toggleMode = () => {
-    setActiveMode((prevMode: string) => (prevMode === "light" ? "dark" : "light"));
+    setActiveMode((prevMode: string) =>
+      prevMode === "light" ? "dark" : "light"
+    );
   };
 
   // mobile-sidebar
- 
+
   const handleClose = () => setIsMobileSidebar(false);
   return (
     <>
       <header
-        className={`sticky top-0 z-[5] ${isSticky
-          ? "bg-white dark:bg-dark shadow-md fixed w-full"
-          : "bg-transparent"
-          }`}
+        className={`sticky top-0 z-[5] ${
+          isSticky
+            ? "bg-white dark:bg-dark shadow-md fixed w-full"
+            : "bg-transparent"
+        }`}
       >
         <Navbar
           fluid
-          className={`rounded-none bg-transparent dark:bg-transparent py-4 sm:px-6 ${layoutType == "horizontal" ? "container mx-auto" : ""
-            }  ${isLayout == "full" ? "!max-w-full" : ""}`}
+          className={`rounded-none bg-transparent dark:bg-transparent py-4 sm:px-6 ${
+            layoutType == "horizontal" ? "container mx-auto" : ""
+          }  ${isLayout == "full" ? "!max-w-full" : ""}`}
         >
           {/* Mobile Toggle Icon */}
           <span
@@ -107,16 +119,31 @@ const Header = ({ layoutType }: HeaderPropsType) => {
               <Search />
 
               {/* App Link Dropwown   */}
-              <AppLinks  />
+              {/* <AppLinks  /> */}
 
               {/* Chat */}
-              <Link href="/apps/chats" className="text-sm text-link dark:text-darklink dark:hover:text-primary px-15 h-10 hover:text-primary flex items-center justify-center" >Chat</Link>
+              <Link
+                href="/apps/chats"
+                className="text-sm text-link dark:text-darklink dark:hover:text-primary px-15 h-10 hover:text-primary flex items-center justify-center"
+              >
+                Chat
+              </Link>
 
               {/* Calendar */}
-              <Link href="/apps/calendar" className="text-sm text-link dark:text-darklink dark:hover:text-primary px-15 h-10 hover:text-primary flex items-center justify-center" >Calendar</Link>
+              <Link
+                href="/apps/calendar"
+                className="text-sm text-link dark:text-darklink dark:hover:text-primary px-15 h-10 hover:text-primary flex items-center justify-center"
+              >
+                Calendar
+              </Link>
 
               {/* Email */}
-              <Link href="/apps/email" className="text-sm text-link dark:text-darklink dark:hover:text-primary px-15 h-10 hover:text-primary flex items-center justify-center" >Email</Link>
+              {/* <Link
+                href="/apps/email"
+                className="text-sm text-link dark:text-darklink dark:hover:text-primary px-15 h-10 hover:text-primary flex items-center justify-center"
+              >
+                Email
+              </Link> */}
             </div>
           </Navbar.Collapse>
 
@@ -131,7 +158,6 @@ const Header = ({ layoutType }: HeaderPropsType) => {
               {activeMode === "light" ? (
                 <div
                   className=" hover:text-primary px-15 group  dark:hover:text-primary focus:ring-0 rounded-full flex justify-center items-center cursor-pointer text-link dark:text-darklink relative"
-
                   onClick={toggleMode}
                 >
                   <span className="flex items-center justify-center relative after:absolute after:w-10 after:h-10 after:rounded-full after:-top-1/2   group-hover:after:bg-lightprimary">
@@ -146,11 +172,9 @@ const Header = ({ layoutType }: HeaderPropsType) => {
                 // Dark Mode Button
                 <div
                   className=" hover:text-primary px-15   dark:hover:text-primary focus:ring-0 rounded-full flex justify-center items-center cursor-pointer text-link dark:text-darklink group relative"
-
                   onClick={toggleMode}
                 >
                   <span className="flex items-center justify-center relative after:absolute after:w-10 after:h-10 after:rounded-full after:-top-1/2   group-hover:after:bg-lightprimary">
-
                     <Icon
                       icon="tabler:sun"
                       width="20"
@@ -160,16 +184,16 @@ const Header = ({ layoutType }: HeaderPropsType) => {
                 </div>
               )}
               {/* Language Dropdown*/}
-              <Language  />
+              <Language />
 
               {/* Shopping Cart */}
               {/* <CartItems/> */}
 
               {/* Messages Dropdown */}
-              <Messages  />
+              <Messages />
 
               {/* Profile Dropdown */}
-              <Profile  />
+              {/* <Profile /> */}
             </div>
           </Navbar.Collapse>
           {/* Mobile Toggle Icon */}
@@ -189,7 +213,9 @@ const Header = ({ layoutType }: HeaderPropsType) => {
         {/* Horizontal Menu  */}
         {layoutType == "horizontal" ? (
           <div className="xl:border-y xl:border-ld">
-            <div className={`${isLayout == "full" ? "w-full px-6" : "container"}`}>
+            <div
+              className={`${isLayout == "full" ? "w-full px-6" : "container"}`}
+            >
               <HorizontalMenu />
             </div>
           </div>
@@ -197,11 +223,11 @@ const Header = ({ layoutType }: HeaderPropsType) => {
       </header>
 
       {/* Mobile Sidebar */}
-      <Drawer open={isMobileSidebar} onClose={handleClose} className="w-130">
+      {/* <Drawer open={isMobileSidebar} onClose={handleClose} className="w-130">
         <Drawer.Items>
           <MobileSidebar />
         </Drawer.Items>
-      </Drawer>
+      </Drawer> */}
     </>
   );
 };
