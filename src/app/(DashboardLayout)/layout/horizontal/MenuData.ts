@@ -9,13 +9,13 @@ const Menuitems = [
     children: [
       {
         title: "Modern",
-        icon: 'tabler:aperture',
+        icon: "tabler:aperture",
         id: uniqueId(),
         href: "/",
       },
       {
         title: "eCommerce",
-        icon: 'tabler:shopping-cart',
+        icon: "tabler:shopping-cart",
         id: uniqueId(),
         href: "/dashboards/eCommerce",
       },
@@ -119,7 +119,7 @@ const Menuitems = [
         icon: "tabler:mail",
         href: "/apps/email",
       },
-      
+
       {
         id: uniqueId(),
         title: "Notes",
@@ -136,7 +136,7 @@ const Menuitems = [
         title: "Invoice",
         id: uniqueId(),
         icon: "tabler:file-text",
-        href:"",
+        href: "",
         children: [
           {
             id: uniqueId(),
@@ -164,7 +164,7 @@ const Menuitems = [
         title: "User Profile",
         id: uniqueId(),
         icon: "tabler:user-circle",
-        href:"",
+        href: "",
         children: [
           {
             id: uniqueId(),
@@ -192,7 +192,7 @@ const Menuitems = [
         title: "Blogs",
         id: uniqueId(),
         icon: "tabler:chart-donut-3",
-        href:"",
+        href: "",
         children: [
           {
             id: uniqueId(),
@@ -210,7 +210,7 @@ const Menuitems = [
         title: "Ecommerce",
         id: uniqueId(),
         icon: "tabler:basket",
-        href:"",
+        href: "",
         children: [
           {
             id: uniqueId(),
@@ -250,7 +250,6 @@ const Menuitems = [
         icon: "tabler:list-details",
         href: "/apps/tickets",
       },
-
     ],
   },
 
@@ -263,187 +262,187 @@ const Menuitems = [
     children: [
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Accordian",
         href: "/ui-components/accrodian",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Badge",
         href: "/ui-components/badge",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Button",
         href: "/ui-components/buttons",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Dropdowns",
         href: "/ui-components/dropdown",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Modals",
         href: "/ui-components/modals",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Tab",
         href: "/ui-components/tab",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Tooltip",
         href: "/ui-components/tooltip",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Alert",
         href: "/ui-components/alert",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Progressbar",
         href: "/ui-components/progressbar",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Pagination",
         href: "/ui-components/pagination",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Breadcrumbs",
         href: "/ui-components/breadcrumb",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Drawer",
         href: "/ui-components/drawer",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Lists",
         href: "/ui-components/listgroup",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Carousel",
         href: "/ui-components/carousel",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Spinner",
         href: "/ui-components/spinner",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Avatar",
         href: "/ui-components/avatar",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Banner",
         href: "/ui-components/banner",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Button Group",
         href: "/ui-components/button-group",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Card",
         href: "/ui-components/card",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Datepicker",
         href: "/ui-components/datepicker",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Footer",
         href: "/ui-components/footer",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "KBD",
         href: "/ui-components/kbd",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Mega Menu",
         href: "/ui-components/megamenu",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Navbar",
         href: "/ui-components/navbar",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Popover",
         href: "/ui-components/popover",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Rating",
         href: "/ui-components/rating",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Sidebar",
         href: "/ui-components/sidebar",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Tables",
         href: "/ui-components/tables",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Timeline",
         href: "/ui-components/timeline",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Toast",
         href: "/ui-components/toast",
       },
       {
         id: uniqueId(),
-        icon:"tabler:circle",
+        icon: "tabler:circle",
         title: "Typography",
         href: "/ui-components/typography",
       },
@@ -646,7 +645,7 @@ const Menuitems = [
                 id: uniqueId(),
                 title: "Boxed Login",
                 href: "/auth/auth2/login",
-              }
+              },
             ],
           },
           {
@@ -664,7 +663,7 @@ const Menuitems = [
                 id: uniqueId(),
                 title: "Boxed Register",
                 href: "/auth/auth2/register",
-              }
+              },
             ],
           },
           {
@@ -682,7 +681,7 @@ const Menuitems = [
                 id: uniqueId(),
                 title: "Boxed Forgot Pwd",
                 href: "/auth/auth2/forgot-password",
-              }
+              },
             ],
           },
           {
@@ -700,7 +699,7 @@ const Menuitems = [
                 id: uniqueId(),
                 title: "Boxed Two Steps",
                 href: "/auth/auth2/two-steps",
-              }
+              },
             ],
           },
           {
@@ -923,7 +922,6 @@ const Menuitems = [
             title: "Expanding",
             href: "/react-tables/expanding",
           },
-          
         ],
       },
     ],

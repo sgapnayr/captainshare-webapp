@@ -11,13 +11,13 @@ const BCrumb = [
     title: "Home",
   },
   {
-    title: "Tickets",
+    title: "Trips",
   },
 ];
 const Tickets = () => {
   return (
     <>
-      <BreadcrumbComp title="Tickets App" items={BCrumb} />
+      <BreadcrumbComp title="Trips" items={BCrumb} />
       <TicketsApp />
     </>
   );

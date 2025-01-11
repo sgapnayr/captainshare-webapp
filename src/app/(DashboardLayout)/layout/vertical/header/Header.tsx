@@ -122,20 +122,20 @@ const Header = ({ layoutType }: HeaderPropsType) => {
               {/* <AppLinks  /> */}
 
               {/* Chat */}
-              <Link
+              {/* <Link
                 href="/apps/chats"
                 className="text-sm text-link dark:text-darklink dark:hover:text-primary px-15 h-10 hover:text-primary flex items-center justify-center"
               >
                 Chat
-              </Link>
+              </Link> */}
 
               {/* Calendar */}
-              <Link
+              {/* <Link
                 href="/apps/calendar"
                 className="text-sm text-link dark:text-darklink dark:hover:text-primary px-15 h-10 hover:text-primary flex items-center justify-center"
               >
                 Calendar
-              </Link>
+              </Link> */}
 
               {/* Email */}
               {/* <Link
@@ -223,11 +223,11 @@ const Header = ({ layoutType }: HeaderPropsType) => {
       </header>
 
       {/* Mobile Sidebar */}
-      {/* <Drawer open={isMobileSidebar} onClose={handleClose} className="w-130">
+      <Drawer open={isMobileSidebar} onClose={handleClose} className="w-130">
         <Drawer.Items>
           <MobileSidebar />
         </Drawer.Items>
-      </Drawer> */}
+      </Drawer>
     </>
   );
 };

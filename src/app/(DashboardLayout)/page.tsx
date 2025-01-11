@@ -11,8 +11,18 @@ import { Social } from "../components/dashboards/modern/Social";
 import { SellingProducts } from "../components/dashboards/modern/SellingProducts";
 import { WeeklyStats } from "../components/dashboards/modern/WeeklyStats";
 import { TopPerformer } from "../components/dashboards/modern/TopPerformer";
+import axios from "axios";
 
 const page = () => {
+  async function testAPI() {
+    try {
+      const response = await axios.get("http://localhost:3000/api/hello");
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <>
       <div className="grid grid-cols-12 gap-6">

@@ -263,7 +263,7 @@ const SidebarContent: MenuItem[] = [
       // },
       {
         id: uniqueId(),
-        name: "Tickets",
+        name: "Trips",
         icon: "tabler:list-details",
         url: "/apps/tickets",
       },
