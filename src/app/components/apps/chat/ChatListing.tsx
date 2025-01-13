@@ -1,4 +1,4 @@
-import { HiOutlineDotsVertical  } from "react-icons/hi";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 import { Badge, Dropdown, TextInput } from "flowbite-react";
 import React, { useContext } from "react";
 import { Icon } from "@iconify/react";
@@ -105,7 +105,7 @@ const ChatListing = () => {
             dismissOnClick={false}
             renderTrigger={() => (
               <span className="h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary hover:text-primary cursor-pointer ">
-                <HiOutlineDotsVertical   size={22} />
+                <HiOutlineDotsVertical size={22} />
               </span>
             )}
           >
@@ -133,7 +133,11 @@ const ChatListing = () => {
               sizing="md"
               required
               icon={() => (
-                <Icon icon="tabler:search" height={18} className="text-dark dark:text-white" />
+                <Icon
+                  icon="tabler:search"
+                  height={18}
+                  className="text-dark dark:text-white"
+                />
               )}
             />
           </div>

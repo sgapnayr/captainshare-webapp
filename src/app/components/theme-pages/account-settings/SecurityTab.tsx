@@ -3,7 +3,7 @@ import React from "react";
 import OutlineCard from "../../shared/OutlineCard";
 import { Button } from "flowbite-react";
 import CardBox from "../../shared/CardBox";
-import {TbDotsVertical } from "react-icons/tb";
+import { TbDotsVertical } from "react-icons/tb";
 import { Icon } from "@iconify/react";
 const SecurityTab = () => {
   return (
@@ -18,7 +18,9 @@ const SecurityTab = () => {
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Corporis sapiente sunt earum officiis laboriosam ut.
                 </p>
-                <Button color={"primary"} className="lg:mt-0 mt-3">Enable</Button>
+                <Button color={"primary"} className="lg:mt-0 mt-3">
+                  Enable
+                </Button>
               </div>
             </div>
 
@@ -52,7 +54,11 @@ const SecurityTab = () => {
         <div className="lg:col-span-4 col-span-12">
           <CardBox>
             <div className="flex justify-center h-12 w-12 rounded-md bg-lightgray dark:bg-darkmuted items-center text-ld">
-              <Icon icon="solar:laptop-2-broken" height={20}  className="text-primary" />
+              <Icon
+                icon="solar:laptop-2-broken"
+                height={20}
+                className="text-primary"
+              />
             </div>
             <h5 className="text-lg mt-1">Devices</h5>
             <p className="text-sm text-darklink -mt-1">
@@ -63,22 +69,42 @@ const SecurityTab = () => {
             </Button>
 
             <div className="flex gap-3.5 items-center mt-6">
-              <Icon icon="solar:smartphone-vibration-line-duotone" height={20} className="text-ld"  />
+              <Icon
+                icon="solar:smartphone-vibration-line-duotone"
+                height={20}
+                className="text-ld"
+              />
               <div>
                 <h6 className="text-base">iPhone 14</h6>
-                <p className="text-sm text-darklink">London UK, Oct 23 at 1:15 AM</p>
+                <p className="text-sm text-darklink">
+                  London UK, Oct 23 at 1:15 AM
+                </p>
               </div>
-              <TbDotsVertical size={18} className="cursor-pointer ms-auto text-ld" />
+              <TbDotsVertical
+                size={18}
+                className="cursor-pointer ms-auto text-ld"
+              />
             </div>
             <div className="flex gap-3.5 items-center border-t border-ld mt-2 pt-3">
-              <Icon icon="solar:monitor-broken" height={20} className="text-ld"  />
+              <Icon
+                icon="solar:monitor-broken"
+                height={20}
+                className="text-ld"
+              />
               <div>
                 <h6 className="text-base">Macbook Air</h6>
-                <p className="text-sm text-darklink">Gujarat India, Oct 24 at 3:15 AM</p>
+                <p className="text-sm text-darklink">
+                  Gujarat India, Oct 24 at 3:15 AM
+                </p>
               </div>
-              <TbDotsVertical size={18} className="cursor-pointer ms-auto text-ld" />
+              <TbDotsVertical
+                size={18}
+                className="cursor-pointer ms-auto text-ld"
+              />
             </div>
-            <Button color={'lightprimary'} className="mt-3">Need Help?</Button>
+            <Button color={"lightprimary"} className="mt-3">
+              Need Help?
+            </Button>
           </CardBox>
         </div>
       </div>

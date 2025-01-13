@@ -52,14 +52,18 @@ const ContactAdd = () => {
 
   return (
     <>
-      <Button className="w-full rounded-md" color={"primary"} onClick={handleShow}>
-        Add New Contact
+      <Button
+        className="w-full rounded-md"
+        color={"primary"}
+        onClick={handleShow}
+      >
+        Add New Captain
       </Button>
       <Modal show={show} onClose={handleClose}>
-        <Modal.Header className="pb-0">Add New Contact</Modal.Header>
+        <Modal.Header className="pb-0">Add New Captain</Modal.Header>
         <Modal.Body>
           <p className="text-sm text-darklink mb-6">
-            Let's add a new contact for your application. Fill in all fields and
+            Let's add a new captain for your application. Fill in all fields and
             click the submit button.
           </p>
           <div>
@@ -195,10 +199,18 @@ const ContactAdd = () => {
                 </div>
               </div>
               <Modal.Footer className="p-0 pt-6">
-                <Button color={"primary"} className="bg-primary rounded-md" type="submit">
+                <Button
+                  color={"primary"}
+                  className="bg-primary rounded-md"
+                  type="submit"
+                >
                   Submit
                 </Button>
-                <Button color="error" onClick={handleClose} className="rounded-md">
+                <Button
+                  color="error"
+                  onClick={handleClose}
+                  className="rounded-md"
+                >
                   Cancel
                 </Button>
               </Modal.Footer>

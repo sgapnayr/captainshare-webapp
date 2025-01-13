@@ -4,24 +4,39 @@ import { Accordion } from "flowbite-react";
 
 const faqPage = [
   {
-    question: "What is an Admin Dashboard?",
+    question: "What is included with my CaptainShare account?",
     answer:
-      "Admin Dashboard is the backend interface of a website or an application that helps to manage the website s overall content and settings. It is widely used by the site owners to keep track of their website, make changes to their content, and more.",
+      "CaptainShare is free to use! You can access all the platform's features, such as boat listings, trip management, captain availability, and more, at no cost.",
   },
   {
-    question: "What should an admin dashboard template include?",
+    question: "Are there any service fees?",
     answer:
-      "Admin dashboard template should include user & SEO friendly design with a variety of components and application designs to help create your own web application with ease. This could include customization options, technical support and about 6 months of future updates.",
+      "CaptainShare only charges a service fee if we successfully match you with a captain for your vessel. This ensures you only pay when the platform delivers value.",
   },
   {
-    question: "Why should I buy admin templates from adminmart?",
+    question: "Can I use CaptainShare for multiple boats or captains?",
     answer:
-      "adminmart offers high-quality templates that are easy to use and fully customizable. With over 101,801 happy customers & trusted by 10,000+ Companies. adminmart is recognized as the leading online source for buying admin templates.",
+      "Absolutely! CaptainShare supports managing multiple boats and captains efficiently. With bulk scheduling, preferred captain lists, and automated trip management, it’s easy to scale for growing fleets.",
   },
   {
-    question: "Do adminmart offers a money back guarantee?",
+    question: "How does CaptainShare ensure smooth operations for my fleet?",
     answer:
-      "There is no money back guarantee in most companies, but if you are unhappy with our product, adminmart gives you a 100% money back guarantee.",
+      "CaptainShare includes tools like a Captain's Pre-Trip Checklist, emergency functionality, lake surveying for education, and GPS integration for locations like Lake Austin. These features streamline operations and improve safety and efficiency.",
+  },
+  {
+    question: "What happens in case of a double-booking?",
+    answer:
+      "CaptainShare prevents double-booking with real-time validation for both captains and boats. Automated scheduling ensures availability is checked and conflicts are resolved proactively.",
+  },
+  {
+    question: "How can I get support after signing up?",
+    answer:
+      "We provide multiple support options, including a detailed knowledge base, ticket submission system, and community support via our Discord channel. Reach out anytime for assistance with features or troubleshooting.",
+  },
+  {
+    question: "Is my data secure with CaptainShare?",
+    answer:
+      "Yes, CaptainShare follows industry-standard security protocols, including data encryption, GDPR/CCPA compliance, audit logging, and HTTPS enforcement to ensure your data is safe.",
   },
 ];
 
@@ -31,10 +46,11 @@ const Questions = () => {
       <div className="flex justify-center py-10">
         <div className="max-w-xl ">
           <h2 className="text-2xl text-center mb-3">
-            Frequently asked questions
+            Frequently Asked Questions
           </h2>
           <p className="text-darklink text-base">
-            Get to know more about ready-to-use admin dashboard templates
+            Learn more about CaptainShare and how it can simplify boat and trip
+            management for captains and owners.
           </p>
         </div>
       </div>

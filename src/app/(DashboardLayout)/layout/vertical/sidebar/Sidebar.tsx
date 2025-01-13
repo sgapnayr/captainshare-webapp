@@ -8,11 +8,15 @@ import NavCollapse from "./NavCollapse";
 import SimpleBar from "simplebar-react";
 import FullLogo from "../../shared/logo/FullLogo";
 import { Icon } from "@iconify/react";
-import Image from "next/image";
-import profileimg from "/public/images/profile/user-1.jpg";
 import { CustomizerContext } from "@/app/context/customizerContext";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/nextjs";
+
 const SidebarLayout = () => {
+  const { isSignedIn, user, isLoaded } = useUser();
   const { isCollapse } = useContext(CustomizerContext);
+  const { signOut } = useAuth();
   return (
     <>
       <div className="xl:block hidden">
@@ -76,27 +80,28 @@ const SidebarLayout = () => {
               >
                 <div className="flex justify-between items-center">
                   <div className="flex gap-4 items-center">
-                    <Image
-                      src={profileimg}
-                      alt="profile-image"
-                      width={40}
-                      height={40}
-                      className="rounded-full"
-                    />
+                    <SignedOut>
+                      <SignInButton />
+                    </SignedOut>
+                    <SignedIn>
+                      <UserButton />
+                    </SignedIn>
                     <div>
-                      <h3 className="text-base font-semibold">Mathew</h3>
-                      <p className="text-xs font-normal text-muted dark:text-darklink">
-                        Designer
-                      </p>
+                      <h3 className="text-base font-semibold">
+                        {user && user.fullName}
+                      </h3>
                     </div>
                   </div>
                   <Tooltip content="Logout">
-                    <div className="cursor-pointer">
+                    <button
+                      onClick={() => signOut()}
+                      className="cursor-pointer"
+                    >
                       <Icon
                         icon="tabler:power"
                         className="text-primary text-2xl"
                       />
-                    </div>
+                    </button>
                   </Tooltip>
                 </div>
               </div>

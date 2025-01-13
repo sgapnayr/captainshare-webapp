@@ -34,7 +34,7 @@ const SidebarContent: MenuItem[] = [
     heading: "Home",
     children: [
       {
-        name: "Modern",
+        name: "Admin",
         icon: "tabler:aperture",
         id: uniqueId(),
         url: "/",
@@ -100,7 +100,7 @@ const SidebarContent: MenuItem[] = [
       //   url: "/dashboards/crypto",
       // },
       {
-        name: "General",
+        name: "My Overview",
         icon: "tabler:activity-heartbeat",
         id: uniqueId(),
         url: "/dashboards/general",
@@ -128,13 +128,12 @@ const SidebarContent: MenuItem[] = [
       //   icon: "tabler:layout-kanban",
       //   url: "/apps/kanban",
       // },
-      // {
-      //   id: uniqueId(),
-      //   name: "Chats",
-      //   icon: "tabler:message-dots",
-      //   url: "/apps/chats",
-      // },
-
+      {
+        id: uniqueId(),
+        name: "Chats",
+        icon: "tabler:message-dots",
+        url: "/apps/chats",
+      },
       // {
       //   id: uniqueId(),
       //   name: "Email",
@@ -149,36 +148,9 @@ const SidebarContent: MenuItem[] = [
       // },
       {
         id: uniqueId(),
-        name: "Contacts",
+        name: "Captains",
         icon: "tabler:phone",
         url: "/apps/contacts",
-      },
-      {
-        name: "Invoice",
-        id: uniqueId(),
-        icon: "tabler:file-text",
-        children: [
-          {
-            id: uniqueId(),
-            name: "List",
-            url: "/apps/invoice/list",
-          },
-          {
-            id: uniqueId(),
-            name: "Details",
-            url: "/apps/invoice/detail/PineappleInc",
-          },
-          {
-            id: uniqueId(),
-            name: "Create",
-            url: "/apps/invoice/create",
-          },
-          {
-            id: uniqueId(),
-            name: "Edit",
-            url: "/apps/invoice/edit/PineappleInc",
-          },
-        ],
       },
       // {
       //   name: "User Profile",
@@ -225,7 +197,44 @@ const SidebarContent: MenuItem[] = [
       //   ],
       // },
       // {
-      //   name: "Ecommerce",
+      //   name: "Captains",
+      //   id: uniqueId(),
+      //   icon: "tabler:basket",
+      //   children: [
+      //     {
+      //       id: uniqueId(),
+      //       name: "Shop",
+      //       url: "/apps/ecommerce/shop",
+      //     },
+      //     {
+      //       id: uniqueId(),
+      //       name: "Details",
+      //       url: "/apps/ecommerce/detail/1",
+      //     },
+      //     {
+      //       id: uniqueId(),
+      //       name: "List",
+      //       url: "/apps/ecommerce/list",
+      //     },
+      //     {
+      //       id: uniqueId(),
+      //       name: "Checkout",
+      //       url: "/apps/ecommerce/checkout",
+      //     },
+      //     {
+      //       id: uniqueId(),
+      //       name: "Add Product",
+      //       url: "/apps/ecommerce/addproduct",
+      //     },
+      //     {
+      //       id: uniqueId(),
+      //       name: "Edit Product",
+      //       url: "/apps/ecommerce/editproduct",
+      //     },
+      //   ],
+      // },
+      // {
+      //   name: "Boats",
       //   id: uniqueId(),
       //   icon: "tabler:basket",
       //   children: [
@@ -267,6 +276,39 @@ const SidebarContent: MenuItem[] = [
         icon: "tabler:list-details",
         url: "/apps/tickets",
       },
+      {
+        id: uniqueId(),
+        name: "Boats",
+        icon: "tabler:file-text",
+        url: "/apps/invoice/list",
+      },
+      // {
+      //   name: "Invoice",
+      //   id: uniqueId(),
+      //   icon: "tabler:file-text",
+      //   children: [
+      //     {
+      //       id: uniqueId(),
+      //       name: "List",
+      //       url: "/apps/invoice/list",
+      //     },
+      //     {
+      //       id: uniqueId(),
+      //       name: "Details",
+      //       url: "/apps/invoice/detail/PineappleInc",
+      //     },
+      //     {
+      //       id: uniqueId(),
+      //       name: "Create",
+      //       url: "/apps/invoice/create",
+      //     },
+      //     {
+      //       id: uniqueId(),
+      //       name: "Edit",
+      //       url: "/apps/invoice/edit/PineappleInc",
+      //     },
+      //   ],
+      // },
     ],
   },
   // {
@@ -481,11 +523,17 @@ const SidebarContent: MenuItem[] = [
   {
     heading: "Pages",
     children: [
+      // {
+      //   name: "Account Setting",
+      //   icon: "tabler:user-circle",
+      //   id: uniqueId(),
+      //   url: "/theme-pages/account-settings",
+      // },
       {
-        name: "Account Setting",
-        icon: "tabler:user-circle",
         id: uniqueId(),
-        url: "/theme-pages/account-settings",
+        name: "Financials",
+        icon: "tabler:file-text",
+        url: "/apps/invoice",
       },
       {
         name: "FAQ",

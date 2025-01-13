@@ -6,18 +6,18 @@ import { ContactContextProvider } from "@/app/context/Conatactcontext";
 
 import ContactListItem from "@/app/components/apps/contacts/ContactListItem";
 import ContactList from "@/app/components/apps/contacts/ContactList";
-import {  Drawer } from "flowbite-react";
+import { Drawer } from "flowbite-react";
 import { useState } from "react";
 
 const index = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const handleClose = () => setIsOpen(false); 
-    
-    const [isOpenContact, setIsOpenContact] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClose = () => setIsOpen(false);
+
+  const [isOpenContact, setIsOpenContact] = useState(false);
 
   return (
     <>
-       <ContactContextProvider>
+      <ContactContextProvider>
         <CardBox className="p-0 overflow-hidden">
           <div className="flex">
             {/* ------------------------------------------- */}
@@ -26,7 +26,7 @@ const index = () => {
             <Drawer
               open={isOpen}
               onClose={handleClose}
-              className="lg:relative lg:transform-none lg:h-auto lg:bg-transparent max-w-[235px] w-full lg:z-[0]"
+              className="lg:relative lg:transform-none lg:h-auto lg:bg-transparent w-full lg:z-[0]"
             >
               <ContactFilter />
             </Drawer>
@@ -35,19 +35,21 @@ const index = () => {
             {/* Middle part */}
             {/* ------------------------------------------- */}
             <div className="left-part lg:max-w-[340px] max-w-full lg:border-e lg:border-ld border-e-0  w-full px-0 pt-0">
-              <ContactSearch onClick={() => setIsOpen(true)} />
-              <ContactList openContact = {setIsOpenContact} />
+              Messages
             </div>
 
             {/* ------------------------------------------- */}
             {/* Detail part */}
             {/* ------------------------------------------- */}
-            <ContactListItem openContactValue = {isOpenContact} onCloseContact={() => setIsOpenContact(false)}  />
+            <ContactListItem
+              openContactValue={isOpenContact}
+              onCloseContact={() => setIsOpenContact(false)}
+            />
           </div>
         </CardBox>
       </ContactContextProvider>
     </>
-  )
-}
+  );
+};
 
-export default index
+export default index;

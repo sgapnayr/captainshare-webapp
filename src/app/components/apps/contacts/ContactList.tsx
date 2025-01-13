@@ -80,15 +80,13 @@ function ContactList({ openContact }: ContactListProps) {
   };
   return (
     <>
-      <SimpleBar className="max-h-[600px] h-[calc(100vh_-_100px)]">
-        <div className="border-right border-color-divider  h-full w-320">
+      <SimpleBar className="max-h-[600px] h-[calc(100vh_-_100px)] w-full">
+        <div className="border-right border-color-divider h-full">
           {selectedDepartment === "Starred" && filteredContacts.length === 0 ? (
             <div className="px-6 pt-3">
               <Alert
                 color="lighterror"
-                icon={() => (
-                  <Icon icon="tabler:alert-circle" height={18} />
-                )}
+                icon={() => <Icon icon="tabler:alert-circle" height={18} />}
               >
                 <span className="font-medium ms-3">No</span> starred contacts
                 available.
@@ -98,9 +96,7 @@ function ContactList({ openContact }: ContactListProps) {
             <div className="px-6 pt-3">
               <Alert
                 color="lighterror"
-                icon={() => (
-                  <Icon icon="tabler:alert-circle" height={18} />
-                )}
+                icon={() => <Icon icon="tabler:alert-circle" height={18} />}
               >
                 <span className="font-medium ms-3">No</span> Contact found
               </Alert>
@@ -115,9 +111,9 @@ function ContactList({ openContact }: ContactListProps) {
                       ? "bg-lighthover dark:bg-darkmuted"
                       : "bg-transparent"
                   }`}
-                  onClick={()=>{
+                  onClick={() => {
                     handleContactClick(contact);
-                    openContact(true)
+                    openContact(true);
                   }}
                 >
                   <Image
@@ -142,13 +138,14 @@ function ContactList({ openContact }: ContactListProps) {
                       onClick={() => toggleStarred(contact.id)}
                     >
                       {starredContacts.includes(contact.id) ? (
-                        <Icon icon='tabler:star-filled'
+                        <Icon
+                          icon="tabler:star-filled"
                           className="text-warning"
                           height="15"
                           fill="rgb(255, 193, 7)"
                         />
                       ) : (
-                        <Icon icon='tabler:star' height="15" />
+                        <Icon icon="tabler:star" height="15" />
                       )}
                     </div>
                     <div onClick={() => handleDeleteClick(contact.id)}>
@@ -170,15 +167,26 @@ function ContactList({ openContact }: ContactListProps) {
         <Modal.Header />
         <Modal.Body>
           <div className="text-center">
-            <Icon icon="tabler:alert-circle" className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
+            <Icon
+              icon="tabler:alert-circle"
+              className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200"
+            />
             <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
               Are you sure you want to delete this contact?
             </h3>
             <div className="flex justify-center gap-4">
-              <Button color='primary' className="rounded-md" onClick={() => setOpenModal(false)}>
+              <Button
+                color="primary"
+                className="rounded-md"
+                onClick={() => setOpenModal(false)}
+              >
                 {"Yes"}
               </Button>
-              <Button color={'error'} className="rounded-md" onClick={() => setOpenModal(false)}>
+              <Button
+                color={"error"}
+                className="rounded-md"
+                onClick={() => setOpenModal(false)}
+              >
                 No, cancel
               </Button>
             </div>

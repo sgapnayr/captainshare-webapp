@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useContext } from "react";
-import { HiOutlineDotsVertical  } from "react-icons/hi";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { Badge, Button, Drawer, HR } from "flowbite-react";
@@ -77,19 +77,38 @@ const ChatContent = ({ onClickMobile }: Props) => {
               </div>
               <div className="flex items-center md:gap-2 gap-1">
                 <div className="btn-circle-hover cursor-pointer sm:h-10 sm:w-10">
-                  <Icon icon="tabler:phone" height={25} className="sm:h-10 h-5 " />
+                  <Icon
+                    icon="tabler:phone"
+                    height={25}
+                    className="sm:h-10 h-5 "
+                  />
                 </div>
                 <div className="btn-circle-hover cursor-pointer sm:h-10 sm:w-10">
-                <Icon icon="tabler:video" height={25} className="sm:h-10 h-5 " />
+                  <Icon
+                    icon="tabler:video"
+                    height={25}
+                    className="sm:h-10 h-5 "
+                  />
                 </div>
                 <div
                   className="btn-circle-hover cursor-pointer sm:h-10 sm:w-10 xl:flex hidden"
                   onClick={handleButtonClick}
                 >
-                  <Icon icon="tabler:menu-2" width={20}  className="sm:h-10 h-5 " />
+                  <Icon
+                    icon="tabler:menu-2"
+                    width={20}
+                    className="sm:h-10 h-5 "
+                  />
                 </div>
-                <div className="btn-circle-hover cursor-pointer sm:h-10 sm:w-10 xl:hidden flex" onClick={() => setIsOpenMedia(true)}>
-                  <Icon icon="tabler:menu-2" width={22}  className="sm:h-10 h-5 " />
+                <div
+                  className="btn-circle-hover cursor-pointer sm:h-10 sm:w-10 xl:hidden flex"
+                  onClick={() => setIsOpenMedia(true)}
+                >
+                  <Icon
+                    icon="tabler:menu-2"
+                    width={22}
+                    className="sm:h-10 h-5 "
+                  />
                 </div>
               </div>
             </div>
@@ -105,7 +124,11 @@ const ChatContent = ({ onClickMobile }: Props) => {
               : "xl:w-[calc(100%_-_300px)] w-full"
           } `}
         >
-          <div className={`${!isRightSide ? 'border-none' : 'lg:border-e'} border-ld h-full py-5 px-5`}>
+          <div
+            className={`${
+              !isRightSide ? "border-none" : "lg:border-e"
+            } border-ld h-full py-5 px-5`}
+          >
             <SimpleBar className="max-h-[700px] h-[600px]">
               <div>
                 <>

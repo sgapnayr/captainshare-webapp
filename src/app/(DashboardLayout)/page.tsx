@@ -4,25 +4,10 @@ import { TopCards } from "../components/dashboards/modern/TopCards";
 import { RevenueUpdate } from "../components/dashboards/modern/RevenueUpdate";
 import { YearlyBreakup } from "../components/dashboards/modern/YearlyBreakup";
 import { MonthlyEarning } from "../components/dashboards/modern/MonthlyEarning";
-import { EmployeeSalary } from "../components/dashboards/modern/EmployeeSalary";
-import { Customers } from "../components/dashboards/modern/Customers";
-import { Projects } from "../components/dashboards/modern/Projects";
-import { Social } from "../components/dashboards/modern/Social";
-import { SellingProducts } from "../components/dashboards/modern/SellingProducts";
 import { WeeklyStats } from "../components/dashboards/modern/WeeklyStats";
 import { TopPerformer } from "../components/dashboards/modern/TopPerformer";
-import axios from "axios";
 
 const page = () => {
-  async function testAPI() {
-    try {
-      const response = await axios.get("http://localhost:3000/api/hello");
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
   return (
     <>
       <div className="grid grid-cols-12 gap-6">
@@ -35,23 +20,6 @@ const page = () => {
         <div className="lg:col-span-4 col-span-12 ">
           <YearlyBreakup />
           <MonthlyEarning />
-        </div>
-        <div className="lg:col-span-4 col-span-12 ">
-          <EmployeeSalary />
-        </div>
-        <div className="lg:col-span-4 col-span-12 ">
-          <div className="grid grid-cols-12 gap-6">
-            <div className="lg:col-span-6 col-span-12">
-              <Customers />
-            </div>
-            <div className="lg:col-span-6 col-span-12">
-              <Projects />
-            </div>
-          </div>
-          <Social />
-        </div>
-        <div className="lg:col-span-4 col-span-12">
-          <SellingProducts />
         </div>
         <div className="lg:col-span-4 col-span-12 flex">
           <WeeklyStats />

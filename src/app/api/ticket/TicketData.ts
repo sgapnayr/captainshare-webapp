@@ -1,8 +1,5 @@
 import mock from "../mock";
-import { Chance } from "chance";
 import { TicketType } from "@/app/(DashboardLayout)/types/apps/ticket";
-
-const chance = new Chance();
 
 const TicketData: TicketType[] = [
   {
@@ -14,6 +11,8 @@ const TicketData: TicketType[] = [
     thumb: "/images/profile/user-10.jpg",
     AgentName: "Captain Ryan",
     CaptainId: "CPT001",
+    CaptainPhoneNumber: "555-000-1111",
+    CaptainEmail: "ryan.captain@example.com",
     Date: new Date("2025-01-12T11:00:00"), // January 12th, 2025
     deleted: false,
     TimeSlots: [{ start: "11:00", end: "15:00" }],
@@ -22,6 +21,7 @@ const TicketData: TicketType[] = [
     ClientNotes: "Bring decorations for the bachelorette party.",
     ClientName: "Sarah Thompson",
     ClientPhoneNumber: "123-456-7890",
+    ClientEmail: "sarah.thompson@example.com",
     FinancialDetails: {
       CaptainRatePerHour: 55,
       HoursBilled: 4,
@@ -43,6 +43,8 @@ const TicketData: TicketType[] = [
     thumb: "/images/profile/user-2.jpg",
     AgentName: "Captain Reed",
     CaptainId: "CPT002",
+    CaptainPhoneNumber: "555-222-3333",
+    CaptainEmail: "reed.captain@example.com",
     Date: new Date("2025-01-14T15:00:00"), // January 14th, 2025
     deleted: false,
     TimeSlots: [{ start: "15:00", end: "19:00" }],
@@ -51,6 +53,7 @@ const TicketData: TicketType[] = [
     ClientNotes: "Requesting a quiet cruise.",
     ClientName: "Michael Carter",
     ClientPhoneNumber: "987-654-3210",
+    ClientEmail: "michael.carter@example.com",
     FinancialDetails: {
       CaptainRatePerHour: 55,
       HoursBilled: 4,
@@ -72,6 +75,8 @@ const TicketData: TicketType[] = [
     thumb: "/images/profile/user-3.jpg",
     AgentName: "Captain Steve",
     CaptainId: "CPT003",
+    CaptainPhoneNumber: "555-444-5555",
+    CaptainEmail: "steve.captain@example.com",
     Date: new Date("2025-01-16T16:00:00"), // January 16th, 2025
     deleted: false,
     TimeSlots: [{ start: "16:00", end: "20:00" }],
@@ -80,6 +85,7 @@ const TicketData: TicketType[] = [
     ClientNotes: "Sunset photography requested.",
     ClientName: "Emily Johnson",
     ClientPhoneNumber: "555-123-4567",
+    ClientEmail: "emily.johnson@example.com",
     FinancialDetails: {
       CaptainRatePerHour: 60,
       HoursBilled: 4,
@@ -101,6 +107,8 @@ const TicketData: TicketType[] = [
     thumb: "/images/profile/user-4.jpg",
     AgentName: "Captain Jack",
     CaptainId: "CPT004",
+    CaptainPhoneNumber: "555-666-7777",
+    CaptainEmail: "jack.captain@example.com",
     Date: new Date("2025-01-20T12:00:00"), // January 20th, 2025
     deleted: false,
     TimeSlots: [{ start: "12:00", end: "16:00" }],
@@ -109,6 +117,7 @@ const TicketData: TicketType[] = [
     ClientNotes: "Special catering arranged for holiday celebration.",
     ClientName: "Chris Evans",
     ClientPhoneNumber: "999-888-7777",
+    ClientEmail: "chris.evans@example.com",
     FinancialDetails: {
       CaptainRatePerHour: 65,
       HoursBilled: 4,
@@ -122,7 +131,6 @@ const TicketData: TicketType[] = [
     },
   },
 ];
-
 // Mock GET request to retrieve Ticket data
 mock.onGet("/api/data/ticket/TicketData").reply(() => {
   return [200, TicketData];

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import ChatListing from "@/app/components/apps/chat/ChatListing";
 import ChatContent from "@/app/components/apps/chat/ChatContent";
 import ChatMsgSent from "@/app/components/apps/chat/ChatMsgSent";
-import { ChatProvider } from '@/app/context/ChatContext/index';
+import { ChatProvider } from "@/app/context/ChatContext/index";
 
 const BCrumb = [
   {
@@ -44,7 +44,7 @@ const ChatsApp = () => {
             </div>
           </div>
         </CardBox>
-      </ChatProvider >
+      </ChatProvider>
     </>
   );
 };

@@ -16,7 +16,7 @@ const BCrumb = [
 const Contacts = () => {
   return (
     <>
-      <BreadcrumbComp title="Contact App" items={BCrumb} />
+      <BreadcrumbComp title="Captains" items={BCrumb} />
       <ContactApp />
     </>
   );

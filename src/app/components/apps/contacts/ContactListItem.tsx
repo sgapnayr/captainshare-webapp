@@ -43,8 +43,6 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
   const [showAlert, setShowAlert] = useState(false); // State for showing alert
   const { activeDir } = useContext(CustomizerContext);
 
-
-
   useEffect(() => {
     setFormData(selectedContact);
   }, [selectedContact]);
@@ -170,10 +168,7 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
                   onClick={handleDeleteClick}
                   className="btn-circle-hover cursor-pointer"
                 >
-                  <Icon
-                    icon="tabler:trash"
-                    height="18"
-                  />
+                  <Icon icon="tabler:trash" height="18" />
                 </div>
               </Tooltip>
             </div>
@@ -273,7 +268,11 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
                     </div>
                   ))}
                   <div className="mt-2">
-                    <Button color="primary" className="rounded-md" onClick={handleSaveClick}>
+                    <Button
+                      color="primary"
+                      className="rounded-md"
+                      onClick={handleSaveClick}
+                    >
                       Save Contact
                     </Button>
                   </div>
@@ -342,10 +341,18 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
                   </div>
                   <HR className="my-2" />
                   <div className="py-4 px-5 gap-2 flex">
-                    <Button color={"primary"} className="rounded-md" onClick={handleEditClick}>
+                    <Button
+                      color={"primary"}
+                      className="rounded-md"
+                      onClick={handleEditClick}
+                    >
                       Edit
                     </Button>
-                    <Button color={"lighterror"} className="rounded-md" onClick={handleDeleteClick}>
+                    <Button
+                      color={"lighterror"}
+                      className="rounded-md"
+                      onClick={handleDeleteClick}
+                    >
                       Delete
                     </Button>
                   </div>
@@ -373,10 +380,18 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
               Are you sure you want to delete this contact?
             </h3>
             <div className="flex justify-center gap-4">
-              <Button color={"error"} className="rounded-md" onClick={() => setOpenModal(false)}>
+              <Button
+                color={"error"}
+                className="rounded-md"
+                onClick={() => setOpenModal(false)}
+              >
                 {"Yes"}
               </Button>
-              <Button color={"lighterror"} className="rounded-md" onClick={() => setOpenModal(false)}>
+              <Button
+                color={"lighterror"}
+                className="rounded-md"
+                onClick={() => setOpenModal(false)}
+              >
                 No, cancel
               </Button>
             </div>

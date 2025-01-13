@@ -184,7 +184,7 @@ const TicketListing = () => {
                   </Table.Cell>
                   <Table.Cell>
                     <Tooltip
-                      content="Delete Ticket"
+                      content="Review Trip"
                       placement="bottom"
                       arrow={false}
                     >
@@ -192,11 +192,7 @@ const TicketListing = () => {
                         className="btn-circle ms-auto"
                         color={"transparent"}
                       >
-                        <Icon
-                          icon="tabler:trash"
-                          height="18"
-                          onClick={() => deleteTicket(ticket.Id)}
-                        />
+                        <Icon icon={"tabler:eye"} height="18" />
                       </Button>
                     </Tooltip>
                   </Table.Cell>
@@ -207,6 +203,7 @@ const TicketListing = () => {
         </div>
       </div>
 
+      {/* TICKET MODAL */}
       {selectedTicket && (
         <Modal
           show={showModal}
@@ -214,8 +211,15 @@ const TicketListing = () => {
           size="lg"
           title="Trip Details"
         >
-          <div className="p-4">
+          <div className="p-4 overflow-auto relative">
             <h4 className="font-bold text-lg mb-4">Trip Overview</h4>
+            <div
+              onClick={() => setShowModal(false)}
+              color="primary"
+              className="absolute top-4 right-4 opacity-50 font-light cursor-pointer"
+            >
+              x
+            </div>
             <div className="mb-6">
               <div className="flex w-full justify-between">
                 <p className="text-sm text-gray-600">Title:</p>
@@ -224,15 +228,9 @@ const TicketListing = () => {
                 </p>
               </div>
               <div className="flex w-full justify-between">
-                <p className="text-sm text-gray-600">Description:</p>
-                <p className="text-base font-medium mb-2">
-                  {selectedTicket.ticketDescription}
-                </p>
-              </div>
-              <div className="flex w-full justify-between">
-                <p className="text-sm text-gray-600">Captain:</p>
+                <p className="text-sm text-gray-600">Location:</p>
                 <p className="text-base font-medium">
-                  {selectedTicket.AgentName} ({selectedTicket.CaptainId})
+                  {selectedTicket.ticketDescription}
                 </p>
               </div>
               <div className="flex w-full justify-between">
@@ -241,8 +239,28 @@ const TicketListing = () => {
               </div>
               <div className="flex w-full justify-between">
                 <p className="text-sm text-gray-600">Date:</p>
-                <p className="text-base font-medium">
+                <p className="text-base font-medium mb-2">
                   {format(new Date(selectedTicket.Date), "E, MMM d yyyy")}
+                </p>
+              </div>
+
+              <h5 className="font-bold text-lg mb-2">Captain Information</h5>
+              <div className="flex w-full justify-between">
+                <p className="text-sm text-gray-600">Captain:</p>
+                <p className="text-base font-medium">
+                  {selectedTicket.AgentName} ({selectedTicket.CaptainId})
+                </p>
+              </div>
+              <div className="flex w-full justify-between">
+                <p className="text-sm text-gray-600">Phone:</p>
+                <p className="text-base font-medium">
+                  {selectedTicket.CaptainPhoneNumber}
+                </p>
+              </div>
+              <div className="flex w-full justify-between">
+                <p className="text-sm text-gray-600">Email:</p>
+                <p className="text-base font-medium">
+                  {selectedTicket.CaptainEmail}
                 </p>
               </div>
             </div>
@@ -261,12 +279,19 @@ const TicketListing = () => {
                 </p>
               </div>
               <div className="flex w-full justify-between">
-                <p className="text-sm text-gray-600">Notes:</p>
+                <p className="text-sm text-gray-600">Email:</p>
                 <p className="text-base font-medium">
+                  {selectedTicket.ClientEmail}
+                </p>
+              </div>
+              <div className="flex w-full justify-between">
+                <p className="text-sm text-gray-600">Notes:</p>
+                <p className="text-end font-medium">
                   {selectedTicket.ClientNotes}
                 </p>
               </div>
             </div>
+
             <div className="mb-6">
               <h5 className="font-bold text-lg mb-2">Boat Information</h5>
               <div className="flex w-full justify-between">

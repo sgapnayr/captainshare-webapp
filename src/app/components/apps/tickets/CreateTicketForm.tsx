@@ -106,46 +106,43 @@ const CreateTicketForm = () => {
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-between mt-6 gap-3">
-            <div>
-              <Dropdown
-                label={selectedAgent.name}
-                className="rounded-md"
-              >
-                {agents.map((agent) => (
-                  <Dropdown.Item
-                    key={agent.id}
-                    onClick={() => {
-                      setSelectedAgent(agent);
-                      setAgentPhoto(agent.photo);
-                    }}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Avatar img={agent.photo} alt={agent.name} rounded />
-                      <span>{agent.name}</span>
-                    </div>
-                  </Dropdown.Item>
-                ))}
-              </Dropdown>
-            </div>
-            <div className="flex gap-3 ">
-              <Button
-                color={"primary"}
-                onClick={handleSubmit}
-                className="rounded-md "
-              >
-                Save
-              </Button>
-              <Button
-                color={"error"}
-                className="rounded-md"
-                onClick={() => {
-                  router.push("/apps/tickets");
-                }}
-              >
-                Cancel
-              </Button>
-            </div>
+          <div>
+            <Dropdown label={selectedAgent.name} className="rounded-md">
+              {agents.map((agent) => (
+                <Dropdown.Item
+                  key={agent.id}
+                  onClick={() => {
+                    setSelectedAgent(agent);
+                    setAgentPhoto(agent.photo);
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <Avatar img={agent.photo} alt={agent.name} rounded />
+                    <span>{agent.name}</span>
+                  </div>
+                </Dropdown.Item>
+              ))}
+            </Dropdown>
           </div>
+          <div className="flex gap-3 ">
+            <Button
+              color={"primary"}
+              onClick={handleSubmit}
+              className="rounded-md "
+            >
+              Save
+            </Button>
+            <Button
+              color={"error"}
+              className="rounded-md"
+              onClick={() => {
+                router.push("/apps/tickets");
+              }}
+            >
+              Cancel
+            </Button>
+          </div>
+        </div>
       </div>
     </CardBox>
   );
