@@ -9,7 +9,7 @@ export async function getTodoById(id: string) {
   return prisma.todo.findUnique({ where: { id } });
 }
 
-export async function createTodo(data: Omit<todo, 'id'>) {
+export async function createTodo(data: Omit<todo, "id">) {
   return prisma.todo.create({ data });
 }
 
